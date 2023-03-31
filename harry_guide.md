@@ -2,6 +2,8 @@
 
 There is a LOT of junk in the folder I uploaded so best to follow my directions.
 
+This info is specific to my workflow and so it'll be missing a lot of the related information required to actually understand yolov5 and how to use it properly. There are loads of tutorials linked on the yolov5 github to help with that stuff or just ask me.
+
 ## Environment
 
 This uses a conda env which has been specified in the environment.yaml file
