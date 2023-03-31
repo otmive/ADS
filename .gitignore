@@ -1,2 +1,7 @@
 .ipynb_checkpoints
 uob_image_set
+applied_data_science/data/
+applied_data_science/models/yolov5-master/classify/datasets/
+applied_data_science/models/yolov5-master/data/vectors.csv
+applied_data_science/image_embeddings_env/
+applied_data_science/YOLOv5_tetsting/yolov5/

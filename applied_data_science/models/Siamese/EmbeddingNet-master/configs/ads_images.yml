@@ -1,0 +1,62 @@
+MODEL:
+  input_shape :  [224, 224, 1500]
+  encodings_len: 256
+  mode : 'triplet'
+  distance_type : 'l1'
+  backbone_name : 'efficientnet-b5'
+  backbone_weights : 'noisy-student'
+  freeze_backbone : False
+  embeddings_normalization: True
+
+DATALOADER:
+  dataset_path : '/Users/rz20505/Documents/training_year/applied_data_science/data/processed/folder_as_class/train_test_split/train'
+  csv_file : '/Users/rz20505/Documents/training_year/applied_data_science/data/processed/embedding_net/annotations.csv'
+  image_id_column : 'image_id'
+  label_column : 'label'
+  validate : True
+  val_ratio : 0.2
+  
+GENERATOR:
+  negatives_selection_mode : 'semihard'
+  k_classes: 1500
+  k_samples: 1500
+  margin: 0.3
+  batch_size : 8
+  n_batches : 500
+  augmentations : 'none'
+
+TRAIN:
+  # optimizer parameters
+  optimizer : 'radam'
+  learning_rate : 0.00001
+  decay_factor : 0.99
+  step_size : 1
+
+  # embeddings learning training parameters
+  n_epochs : 10 # originally 1000
+  
+  # plot training history
+  plot_history : True
+
+# SOFTMAX_PRETRAINING:
+#   # softmax pretraining parameters
+#   optimizer : 'radam'
+#   learning_rate : 0.0001
+#   decay_factor : 0.99
+#   step_size : 1
+
+#   batch_size : 16
+#   val_steps : 200
+#   steps_per_epoch : 1000
+#   n_epochs : 50
+
+ENCODINGS:
+  # encodings parameters
+  save_encodings : True
+  centers_only: False
+  max_num_samples_of_each_class : 30
+  knn_k : 1
+
+GENERAL:
+  project_name : 'ads'
+  work_dir : '/Users/rz20505/Documents/training_year/applied_data_science/'

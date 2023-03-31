@@ -1,0 +1,8 @@
+#image-classifiers
+#tensorflow-gpu==2.2.0
+matplotlib
+albumentations
+scikit-learn
+opencv-python
+keras-rectified-adam
+efficientnet
