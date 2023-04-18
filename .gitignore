@@ -6,3 +6,5 @@ applied_data_science/models/yolov5-master/data/vectors.csv
 applied_data_science/image_embeddings_env/
 applied_data_science/YOLOv5_tetsting/yolov5/
 applied_data_science/models/yolov5-master/my_testing/tensorboard-logs/
+cache
+.DS_Store
