@@ -1,0 +1,31 @@
+- exploring different models
+	- git repos
+	- trying to get vector representations
+	- legacy code
+	- m1 compatibility
+	- old libraries incompatible
+	- found YOLOv5
+- Training dataset on YOLOv5
+	- splitting classes into trtain/test
+		- no val due to dataset size limits
+	- resizing images
+	- uploading to github
+	- designing colab notebook
+	- setting up CleaML for experiment logging
+	- ran for several sets of epochs
+	- pretrained on {dataset name} dataset using {model size} size of YOLOv5
+- Extracting feature vectors
+	- non-standard approach
+	- manually extracted them from YOLOv5 code
+	- Then stored with the relevant image in csv file
+- Data visualization
+	- First tried 3d
+		- PCA
+		- TSNE
+		- These weren't great as they didn't represent the high demensional feature space very well
+	- Closest vectors in euclidian space
+	- Highest cosine similarity
+	- top-1 and top-5 accuracy
+	- we did a top-9 accuracy for our own initial observations
+	- Subjective analysis of how well the vectors of various items of clothing aligned with the vectors nearest through manual image analysis
+	- Train/Test loss graphs
